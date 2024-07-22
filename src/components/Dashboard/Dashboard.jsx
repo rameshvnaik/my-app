@@ -8,28 +8,13 @@ import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
-import Badge from '@mui/material/Badge';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import Link from '@mui/material/Link';
 
-import { mainListItems, secondaryListItems } from  '../ListItem/ListItem'
+import { mainListItems } from  '../ListItem/ListItem'
 import { Outlet } from 'react-router-dom';
 import './Dashboard.scss'
 
-
-function Copyright(props) {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
 
 const drawerWidth = 200;
 
@@ -77,7 +62,6 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
   }),
 );
 
-// TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 
 export default function Dashboard() {
@@ -92,7 +76,7 @@ export default function Dashboard() {
         <AppBar position="absolute" open={open}>
           <Toolbar
             sx={{
-              pr: '24px', // keep right padding when drawer closed
+              pr: '24px',
             }}
           >
             <IconButton
@@ -108,16 +92,15 @@ export default function Dashboard() {
             </IconButton>
             <Typography
               component="h1"
-              variant="h6"
+              variant="h7"
               color="inherit"
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              Dashboard
+              Boxigo
             </Typography>
             <IconButton color="inherit">
-              <Badge badgeContent={4} color="secondary">
-              </Badge>
+              Contact us
             </IconButton>
           </Toolbar>
         </AppBar>
@@ -134,10 +117,9 @@ export default function Dashboard() {
             </IconButton>
           </Toolbar>
           <Divider />
-          <List component="nav">
+          <List className='sidebar'>
             {mainListItems}
-            <Divider sx={{ my: 1 }} />
-            {secondaryListItems}
+            
           </List>
         </Drawer>
         <Box
@@ -153,8 +135,8 @@ export default function Dashboard() {
           }}
         >
           <Toolbar />
-          <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-            <Grid container spacing={3}>
+          <Container maxWidth="lg" sx={{ mt: 4, mb: 4}} className='container'>
+            <Grid container spacing={3} paddingLeft={'5px'}>
               <Outlet/>
          
             </Grid>

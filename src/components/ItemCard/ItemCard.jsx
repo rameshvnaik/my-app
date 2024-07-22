@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, CardContent, Typography, Button, IconButton, Grid, Collapse } from '@mui/material';
+import { Card, CardContent, Typography, Button, Grid } from '@mui/material';
 import './ItemCard.scss'
 import HomeIcon from '@mui/icons-material/Home';
 import KeyboardCommandKeyIcon from '@mui/icons-material/KeyboardCommandKey';
@@ -16,7 +16,6 @@ function ItemCard({ item }) {
     const handleViewMore = () => {
         setShowMore(!showMore);
     };
-
 
     return (
         <Card className='Item-card'>
@@ -119,7 +118,7 @@ function ItemCard({ item }) {
                                         </Grid>
 
                                         <Grid item md={3}><h5>Parking Required</h5>
-                                            <p>{item.old_floor_no}</p>
+                                            <p>{item.packing_service}</p>
                                         </Grid>
 
                                         <Grid item md={3}><h5>Distance fron truck to door</h5>
@@ -145,7 +144,7 @@ function ItemCard({ item }) {
                                         </Grid>
 
                                         <Grid item md={3}><h5>Parking Required</h5>
-                                            <p>{item.old_floor_no}</p>
+                                            <p>{item.packing_service}</p>
                                         </Grid>
 
                                         <Grid item md={3}><h5>Distance fron truck to door</h5>

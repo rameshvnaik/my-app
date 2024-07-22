@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import React from 'react'
-import { Card, CardContent, Typography, Button, IconButton, Grid, Collapse } from '@mui/material';
+import { Card, Typography, IconButton, Grid } from '@mui/material';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import InventoryDisplayBar from '../InventoryDisplayBar/InventoryDisplayBar';
@@ -12,7 +12,6 @@ const InventoryCard = ({ item, cardName }) => {
     const toggleShowMore = () => {
         setShowMore(!showMore);
     }
-
 
     return (
         <>
@@ -35,16 +34,10 @@ const InventoryCard = ({ item, cardName }) => {
                             </IconButton>
                         </Grid>
                     </Grid>
-
-              
-
-
             </Card>
 
             {showMore &&
                 <>
-
-                    
                        <div className="inventory-container">
                        {item?.map((item) => (
                          <div className='inventorybar'>
@@ -52,11 +45,8 @@ const InventoryCard = ({ item, cardName }) => {
                          </div>
                        ))}
                      </div>
-                    
-
                 </>
             }
-
         </>
     )
 }
