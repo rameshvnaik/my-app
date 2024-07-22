@@ -1,0 +1,17 @@
+.inventory-display {
+    width: 180px;
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 16px;
+  }
+  
+  .category, .subcategory, .item {
+    margin-bottom: 8px;
+  }
+  
+  .category h2, .subcategory h3 {
+    margin-bottom: 4px;
+  }
+  

@@ -1,0 +1,45 @@
+
+.Item-card{
+
+    .grid-items{
+        display: flex;
+        justify-content: space-between;
+
+        
+    }
+    .grid-blocks{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .view-button{
+             border: 2px solid red;
+             padding: 10px 25px;
+            text-transform: none;
+            color: rgb(241, 66, 66);
+        }
+        .quote-button{
+            color: white;
+            background-color: red;
+             text-transform: none;
+             padding: 10px 25px;
+        }
+
+        .icon{
+            color: rgb(246, 60, 60);
+        }
+    }
+
+    .card{
+        margin-top: 10px 0;
+    }
+
+    .house-details-section{
+        margin: 20px ;
+    }
+
+    .header{
+        margin-top: 20px;
+        color: red;
+        font-weight: 600;
+    }
+}
