@@ -4,6 +4,19 @@
     height: 60px;
     padding: 5px 10px;
     text-align: center;
+
+    .total-assets{
+        background-color: red;
+        color: white;
+        padding: 10px;
+        border-radius: 50% 50%;
+    }
+
+    .card-header{
+        font-weight: 600;
+        color: red;
+        font-size: 16px;
+    }
 }
 
 .inventory-container {

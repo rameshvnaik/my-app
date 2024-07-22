@@ -1,6 +1,6 @@
 import ItemCard from '../ItemCard/ItemCard';
 import React, { useState, useEffect } from 'react';
-import { Grid, Button, Typography } from '@mui/material';
+import { Grid } from '@mui/material';
 
 function Mymoves() {
 
@@ -27,9 +27,9 @@ function Mymoves() {
   return (
     <div className="App">
       <Grid container spacing={2}>
-        {data && data.map((item) => (
-          <Grid item xs={12} key={item.id}>
-            <ItemCard item={item} />
+        {data && data.map((item, i) => (
+          <Grid item xs={12} key={i}>
+            <ItemCard item={item} key={i} />
           </Grid>
         ))}
       </Grid>

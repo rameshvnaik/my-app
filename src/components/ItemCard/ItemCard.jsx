@@ -63,8 +63,6 @@ function ItemCard({ item }) {
                         <Grid item md={2.5} className='grid-blocks'>
                             <WorkHistoryIcon className='icon' />
                             <h6>{item.moving_on}</h6>
-
-
                         </Grid>
                         <Grid item md={1.5} className='grid-blocks'>
                             Is flexible
@@ -89,22 +87,16 @@ function ItemCard({ item }) {
                             <div>
                                 <Typography variant="body1">Inventory Details</Typography>
 
-
                                 <InventoryCard item={item.items.inventory} cardName={"Living Room"} />
                                 <InventoryCard item={item.items.inventory} cardName={"Bed Room"} />
                                 <InventoryCard item={item.items.inventory} cardName={"Kitchen"} />
                                 <InventoryCard item={item.items.inventory} cardName={"Bath Room"} />
-
-
-
                             </div>
                             <div className='house-details-section'>
                                 <Grid container gap={4} alignItems={'center'}>
                                     <h4>House Details</h4>
                                     <CustomButton name={"Edit house details"} color='black' />
                                 </Grid>
-
-
                                 <div>
                                     <Typography className='header'> Existing house details</Typography>
                                     <Grid container>
@@ -124,17 +116,13 @@ function ItemCard({ item }) {
                                         <Grid item md={3}><h5>Distance fron truck to door</h5>
                                             <p>{item.old_parking_distance}</p>
                                         </Grid>
-
-
                                     </Grid>
-
-
                                 </div>
                                 <hr></hr>
                                 <div>
                                     <Typography className='header'>New house details</Typography>
                                     <Grid container>
-                                    <Grid item md={3}>
+                                        <Grid item md={3}>
                                             <h5>Floor No</h5>
                                             <p>{item.new_floor_no}</p>
                                         </Grid>
@@ -152,13 +140,9 @@ function ItemCard({ item }) {
                                         </Grid>
                                     </Grid>
                                 </div>
-
-
                             </div>
-
                         </>
                     )}
-
                 </CardContent>}
         </Card>
     );
