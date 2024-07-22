@@ -10,6 +10,9 @@ import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
+import PhoneIcon from '@mui/icons-material/Phone';
+import MenuIcon from '@mui/icons-material/Menu';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 
 import { mainListItems } from  '../ListItem/ListItem'
 import { Outlet } from 'react-router-dom';
@@ -89,6 +92,8 @@ export default function Dashboard() {
                 ...(open && { display: 'none' }),
               }}
             >
+            <MenuIcon />
+
             </IconButton>
             <Typography
               component="h1"
@@ -100,7 +105,7 @@ export default function Dashboard() {
               Boxigo
             </Typography>
             <IconButton color="inherit">
-              Contact us
+              <PhoneIcon/>
             </IconButton>
           </Toolbar>
         </AppBar>
@@ -114,6 +119,8 @@ export default function Dashboard() {
             }}
           >
             <IconButton onClick={toggleDrawer}>
+            <ChevronLeftIcon />
+
             </IconButton>
           </Toolbar>
           <Divider />
